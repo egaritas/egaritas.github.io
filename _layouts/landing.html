@@ -1,0 +1,12 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+	{% if jekyll.environment == "production" %}{% assign isMin = '.min' %}{% endif %}
+	{% include head.html %}
+	<body>
+		{{ content }}
+		{% include scripts.html %}
+	</body>
+</html>

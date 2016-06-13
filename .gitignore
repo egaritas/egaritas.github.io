@@ -1,3 +1,11 @@
+.DS_Store
 _site/
 .sass-cache/
 .jekyll-metadata
+node_modules/
+
+assets/styles/app.css
+assets/styles/app.min.css.map
+
+assets/scripts/app.js
+assets/scripts/app.min.js.map

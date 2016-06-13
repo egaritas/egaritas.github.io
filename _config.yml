@@ -1,0 +1,54 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Egaritas
+description: Feed Your Mind
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://egaritas.com" # the base hostname & protocol for your site
+enforce_ssl: egaritas.com
+
+twitter_username: egaritas
+facebook_username: egaritas
+instagram_username: egaritas
+linkedin_username: egaritas
+pinterest_username: egaritas
+tumblr_username: egaritas
+github_username:  egaritas
+
+# Build settings
+
+include:
+  - _pages
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - gulpfile.js
+  - node_modules
+  - package.json
+  - vendor
+
+markdown: kramdown
+
+gems:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+compress_html:
+  blanklines: false
+  clippings: all
+  comments: all
+  endings: []
+  ignore:
+    envs: []
+  profile: false
+  startings: []
