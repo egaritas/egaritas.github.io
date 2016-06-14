@@ -1,2 +1,3 @@
-<script src="assets/scripts/app.js"></script>
+{% if jekyll.environment == "production" %}{% assign isMin = '.min' %}{% endif %}
+<script src="{{ "/assets/scripts/app" | prepend: site.baseurl | append: isMin | append: ".js" }}"></script>
 {% include google/tagmanager.html %}
