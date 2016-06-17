@@ -1,3 +1,4 @@
 {% if jekyll.environment == "production" %}{% assign isMin = '.min' %}{% endif %}
+<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
 <script src="{{ "/assets/scripts/app" | prepend: site.baseurl | append: isMin | append: ".js" }}"></script>
 {% include google/tagmanager.html %}

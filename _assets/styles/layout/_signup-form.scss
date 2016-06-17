@@ -2,53 +2,92 @@
 @import '../libs/functions';
 @import '../libs/mixins';
 
-///
-/// Eventually by HTML5 UP
-/// html5up.net | @n33co
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
-
 /* Signup Form */
+#signup-form {
+	@include vendor('display', 'flex');
+	position: relative;
 
-	#signup-form {
-		@include vendor('display', 'flex');
-		position: relative;
+	input[type="text"],
+	input[type="password"],
+	input[type="email"] {
+		width: 18em;
+	}
 
-		input[type="text"],
-		input[type="password"],
-		input[type="email"] {
-			width: 18em;
-		}
+	> * {
+		margin: 0 0 0 1em;
+	}
 
-		> * {
-			margin: 0 0 0 1em;
-		}
+	> :first-child {
+		margin: 0 0 0 0;
+	}
 
-		> :first-child {
-			margin: 0 0 0 0;
-		}
+	.message-wrapper {
+		position: absolute;
+		display: none;
+		padding: 8px;
+		background: #efefef;
+		-webkit-border-radius: 8px;
+		-moz-border-radius: 8px;
+		border-radius: 8px;
+		left: 0;
+		opacity: 0;
+		margin-top: 1em;
+		top: -40px;
 
-		@include breakpoint(xsmall) {
-			@include vendor('flex-direction', 'column');
-
-			input[type="type"],
-			input[type="password"],
-			input[type="email"] {
-				width: 100%;
-			}
-
-			> * {
-				margin: 1.25em 0 0 0;
-			}
-
-			.message {
-				bottom: -1.5em;
-				font-size: 0.9em;
-				height: 1em;
-				left: 0;
-				line-height: inherit;
-				margin-top: 0;
-				position: absolute;
+		&.visible {
+			@include vendor('transform', 'scale(1)');
+			opacity: 1;
+			display: block;
+			&:after {
+				opacity: 1;
 			}
 		}
 	}
+
+	.message {
+		@include icon;
+		@include vendor('transition', (
+			'opacity #{_duration(transition)} ease-in-out',
+			'transform #{_duration(transition)} ease-in-out'
+		));
+		@include vendor('transform', 'scale(1.05)');
+
+		&:before {
+			margin-right: 0.5em;
+		}
+
+		&.success {
+			color: _palette(positive, bg);
+
+			&:before {
+				content: '\f00c';
+			}
+		}
+
+		&.loading {
+			color: _palette(positive, bg);
+		}
+
+		&.failure {
+			color: _palette(negative, bg);
+
+			&:before {
+				content: '\f119';
+			}
+		}
+	}
+
+	@include breakpoint(xsmall) {
+		@include vendor('flex-direction', 'column');
+
+		input[type="type"],
+		input[type="password"],
+		input[type="email"] {
+			width: 100%;
+		}
+
+		> * {
+			margin: 1.25em 0 0 0;
+		}
+	}
+}
