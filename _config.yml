@@ -7,7 +7,7 @@
 
 # Site settings
 title: Egaritas
-description: Feed Your Mind
+description: Learning Never Stops
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://egaritas.com" # the base hostname & protocol for your site
 enforce_ssl: egaritas.com
@@ -33,6 +33,7 @@ exclude:
   - gulpfile.js
   - node_modules
   - package.json
+  - test
   - vendor
 
 markdown: kramdown
