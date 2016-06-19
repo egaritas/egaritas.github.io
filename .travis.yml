@@ -1,17 +1,16 @@
 language: ruby
 rvm:
 - 2.2
-
 install:
- - nvm install 6.2
- - npm set progress=false && npm install
- - bundle install
-
+- nvm install 6.2
+- npm set progress=false && npm install
+- bundle install
 script:
-  - ./node_modules/.bin/gulp
-
+- "./node_modules/.bin/gulp"
 env:
   global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-
-sudo: false # route your build to the container-based infrastructure for a faster build
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+sudo: false
+notifications:
+  slack:
+    secure: U+c9HiQX0QD7U19GEtLJDURlO2CiVIGm4rOMN8wzGRomGtZWEa2n2T6HfQn5PFvBarGLuSgPMbG1XIE5ejUNz34nn54NG4Zv6dsYnX2PeezUxx0Jyq+nPfKIObi3SHSEGnvKHkSi69aWL2iTgQfW+oGMRZ19JblhxQqIv4ZoQBBCyqk15AiQE/93VjS7UilqIiN3/pd3yklu1mr+PxTpajb5WnVcxzOv1YHDYviPLgWDE/7AtE25UHJj1YNmWoe8EgUDTS6wEN2WLY+RKDpyqFzIjTNVYS4/zDJEH3TFSAbvyROaP9IFR4Rmq9POizZWO++s08zM22AT3A8D2xyUpyx4w+d2iAxIO91w0CkWVze2ADU8/s7zEr5LRJfjm20sl/WXNRBLyM3j3G/o3r58wW/ieHP4It23h6tMsKhg/V3UxHMlWg/iq7eFqHI6WE75pJWYYmdEbEmKBOe+JdN4Jw4uCl58oVif7e6Ru9i7DidfKWHsKsWbGgX+i0CMfBgjwlTmqNhN0hkovMt4QMLWMG0ayWP1aLsb/eY7noyYHuOBkI8ql+w1NklZj1q0sd7py63PiYuLiB5aZvwwDUozcRIzjThuTy+Vg7YAMAcVmmg81VXqgmTSnwqPDnyFsT6Dw+ULrmMXvojXenMDd9ZUHvGeYqOCgFgrR2LvWYzAEq4=
