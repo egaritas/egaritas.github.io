@@ -9,18 +9,13 @@
 // @import 'mixin';
 // @import 'base/elements';
 
-/*
-	Eventually by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';
 @import 'libs/skel';
 
 @import 'node_modules/font-awesome/scss/font-awesome.scss';
-@import url('http://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url('//fonts.googleapis.com/css?family=Roboto:400,700');
 
 @include skel-breakpoints((
     xlarge: '(max-width: 1680px)',
